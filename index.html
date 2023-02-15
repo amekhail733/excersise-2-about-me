@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excersise 2 - About Me</title>
+    <style>
+        .list-item{color:red;}
+        img{width:200px; height:auto;}
+    </style>
+</head>
+<body id="BODY">
+    <h1>About Me</h1>
+    <ul>
+        <li>Nickname: <span id="nickName"></span></li>
+        <li>Favorites: <span id="favorites"></span></li>
+        <li>Hometown: <span id="homeTown"></span></li>
+    </ul>
+</body>
+<!-- Script -->
+<script defer>
+    // Change the class name
+    document.getElementsByTagName('li')[0].className = "list-item";
+    document.getElementsByTagName('li')[1].className = "list-item";
+    document.getElementsByTagName('li')[2].className = "list-item";
+
+    // Changing the body font to Arial font
+    var BODY = document.getElementById("BODY");
+    BODY.style.fontFamily = "Arial, sans-serif";
+
+    // Declaring the nickname, favorites, and hometown and also adding it to the HTML
+    var nickName = document.getElementById("nickName").textContent = "Drew";
+    var favorites = document.getElementById("favorites").textContent = "Driving my Car, gym, eating, music, my homies <3";
+    var homeTown = document.getElementById("homeTown").textContent = "Surprise, Arizona";
+
+    // My Image and adding to the HTML
+    var portrait = document.createElement("img");
+    portrait.src = "me.jpg";
+    document.body.appendChild(portrait);
+</script>
+</html>
